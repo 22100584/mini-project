@@ -57,7 +57,9 @@ Product slist[20];
         else if (menu ==6){
           filterPrice(slist, index);
     	}
-    }
+    	else if (menu==7){
+		saveproduct(slist,index);
+	}
     printf("종료됨!\n");
     return 0;
 }
