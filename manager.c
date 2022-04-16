@@ -143,3 +143,19 @@ int loadProduct(Product *p){
     return i;
 }
 
+void filterMass(Product *s, int count){
+  int alpha, omega,scnt=0;;
+  printf("최소중량~최대중량: ");
+  scanf("%d %d",&alpha,&omega);
+  for(int i=0;i<count;i++){
+    if(s[i].price==-1) continue;
+    if((s[i].mass>=alpha)&& (s[i].mass<omega)){
+      printf("%2d ",i+1);
+      readProduct(s[i]);
+      scnt++;
+  }
+  }
+    if(scnt==0)
+    printf("=> 검색된 데이터 없음!");
+    printf("\n");
+    }
