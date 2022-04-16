@@ -16,5 +16,5 @@ int selectDataNo(Product *p, int count);
 int deleteProduct(Product *p);
 void searchName(Product *p, int count);
 void filterPrice(Product *p, int count);// 가격 범위를 정하면 그 범위의 상품 열
-
+void saveProduct(Product *p, int count);// 파일에 저장
 
