@@ -14,6 +14,7 @@ printf("4. 삭제\n");
 printf("5. 이름검색\n");
 printf("6. 가격범위검색\n");
 printf("7. 저장\n");
+printf("8. 중량범위검색\n");
 printf("0. 종료\n\n");
 printf("=> 원하는 메뉴는? ");
 scanf("%d", &menu);
@@ -37,7 +38,7 @@ return 1;
 void readProduct(Product s){
 if(s.dm==1)
     printf("이름: %s\n   설명: %s\n   중량: %d 가격: %d 배송방법: 새벽배송\n",s.name,s.exp,s.mass,s.price);
-else if(s.dm==0)
+else if(s.dm==2)
     printf("이름: %s\n   설명: %s\n   중량: %d 가격: %d 배송방법: 택배배송\n",s.name,s.exp,s.mass,s.price);
 }
 

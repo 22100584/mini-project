@@ -59,12 +59,13 @@ Product slist[20];
           filterPrice(slist, index);
     	}
     	else if (menu==7){
-		saveproduct(slist,index);
+		saveProduct(slist,index);
 	}
 	else if (menu ==8){
           filterMass(slist, index);
-        }
-    printf("종료됨!\n");
+	}
+	}
+    printf("종료됨!\n:");
     return 0;
 }
 
