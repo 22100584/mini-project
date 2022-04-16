@@ -61,6 +61,9 @@ Product slist[20];
     	else if (menu==7){
 		saveproduct(slist,index);
 	}
+	else if (menu ==8){
+          filterMass(slist, index);
+        }
     printf("종료됨!\n");
     return 0;
 }
