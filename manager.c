@@ -113,3 +113,16 @@ void filterPrice(Product *s, int count){
     printf("\n");
     }
 
+void saveProduct(Product *p, int count){
+    FILE *fp;
+    fp=fopen("score.txt","wt");
+    for(int i=0;i<count;i++){
+        if(p[i].price==-1) continue;
+        fprintf(fp,"%s\n",p[i].name);
+        fprintf(fp,"%s\n",p[i].exp);
+        fprintf(fp,"%d %d %d\n",p[i].mass,p[i].price,p[i].dm);
+    }
+    fclose(fp);
+    printf("=>저장됨! ");
+}
+
