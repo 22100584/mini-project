@@ -11,6 +11,7 @@ int main(void){
 Product slist[20];
     int count = 0,menu;
     int index=0;//데이터번호
+    count= loadProduct(slist);
     index=count;
 
 
