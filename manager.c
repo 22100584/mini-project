@@ -125,4 +125,20 @@ void saveProduct(Product *p, int count){
     fclose(fp);
     printf("=>저장됨! ");
 }
+int loadProduct(Product *p){
+    int  i=0;
+    FILE *fp;
+    fp=fopen("score.txt","rt");
+    for(;i<100;i++){
+        fscanf(fp," %[^\n]s",p[i].name);
+        if(feof(fp)) break;
+        fscanf(fp," %[^\n]s",p[i].exp);
+        fscanf(fp,"%d",&p[i].mass);
+        fscanf(fp,"%d",&p[i].price);
+        fscanf(fp,"%d",&p[i].dm);
+    }
+    fclose(fp);
+    printf("=> 로딩성공!\n");
+    return i;
+}
 
