@@ -102,7 +102,8 @@ void filterPrice(Product *s, int count){
   printf("최소가격~최대가격: ");
   scanf("%d %d",&alpha,&omega);
   for(int i=0;i<count;i++){
-    if((s[i].price>=alpha)&& (s[i].price<omega)){
+    if(s[i].price==-1) continue;
+	if((s[i].price>=alpha)&& (s[i].price<omega)){
       printf("%2d ",i+1);
       readProduct(s[i]);
       scnt++;
